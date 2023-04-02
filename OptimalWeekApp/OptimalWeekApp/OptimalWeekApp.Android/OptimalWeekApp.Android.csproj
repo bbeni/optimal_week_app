@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -89,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OptimalWeekApp\OptimalWeekApp.csproj">
-      <Project>{044AEE5E-6D89-4A91-BCCD-6ECD567A6B17}</Project>
+      <Project>{50E14A8B-AADC-4080-9E6D-3CD14B7786D1}</Project>
       <Name>OptimalWeekApp</Name>
     </ProjectReference>
   </ItemGroup>
