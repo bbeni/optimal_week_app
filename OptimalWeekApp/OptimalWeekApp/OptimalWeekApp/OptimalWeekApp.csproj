@@ -9,4 +9,19 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\DayPage.xaml.cs">
+      <DependentUpon>DayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\WeekPage.xaml.cs">
+      <DependentUpon>WeekPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\DayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
