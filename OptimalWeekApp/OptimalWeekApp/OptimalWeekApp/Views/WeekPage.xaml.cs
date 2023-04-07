@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace OptimalWeekApp.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class WeekPage : ContentPage
     {
-        public AboutPage()
+        public WeekPage()
         {
             InitializeComponent();
         }
