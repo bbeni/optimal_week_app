@@ -9,27 +9,19 @@ namespace OptimalWeekApp.ViewModels
 {
     public class WeekPageViewModel : BaseViewModel
     {
-        private async void GotoMonday(object obj)
+        public WeekPageViewModel(INavigationService navigationService)
         {
-            await Shell.Current.GoToAsync("///DayPage");
-        }
-        public WeekPageViewModel()
-        {
-            Title = "About";
+            Title = "Cool Week Planner";
+            _navigationService = navigationService;
 
-            async void test()
+            NavigateToDayCommand = new Command<string>(async (day) =>
             {
-                Task.Delay(10000).Wait();
-                await Browser.OpenAsync("https://www.google.com");
-            }
-
-            OpenWebCommand = new Command(test);
-            OpenDayViewCommand = new Command(GotoMonday);
-
+                await _navigationService.NavigateToDayPage(day);
+            });
 
         }
          
-        public ICommand OpenWebCommand { get; }
-        public ICommand OpenDayViewCommand { get; }
+        public ICommand NavigateToDayCommand { get; private set; }
+        private readonly INavigationService _navigationService;
     }
 }

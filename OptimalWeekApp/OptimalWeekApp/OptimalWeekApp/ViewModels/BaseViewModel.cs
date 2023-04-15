@@ -1,4 +1,4 @@
-﻿using OptimalWeekApp.Models;
+﻿    using OptimalWeekApp.Models;
 using OptimalWeekApp.Services;
 using System;
 using System.Collections.Generic;
@@ -38,6 +38,7 @@ namespace OptimalWeekApp.ViewModels
             OnPropertyChanged(propertyName);
             return true;
         }
+
 
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;

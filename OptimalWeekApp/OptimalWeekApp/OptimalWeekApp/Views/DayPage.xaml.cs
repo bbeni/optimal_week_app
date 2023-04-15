@@ -14,10 +14,10 @@ namespace OptimalWeekApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DayPage : ContentPage
     {
-        public DayPage()
+        public DayPage(string day)
         {
             InitializeComponent();
-            BindingContext = new DayPageViewModel();
+            BindingContext = new DayPageViewModel(day);
         }
     }
 }

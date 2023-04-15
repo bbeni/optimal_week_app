@@ -3,23 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OptimalWeekApp.Views.DayPage"
              xmlns:vm = "clr-namespace:OptimalWeekApp.ViewModels"
-             xmlns:local="clr-namespace: OptimalWeekApp.ViewModels"  
+             xmlns:local="clr-namespace: OptimalWeekApp.ViewModels" 
+             Title="{Binding Day}"
 >
-    <ContentPage.BindingContext>
-        <vm:DayPageViewModel />
-    </ContentPage.BindingContext>
-    <Shell.BackButtonBehavior>
-        <BackButtonBehavior Command="{Binding GoBackCommand}">
-
-
-        </BackButtonBehavior>
-
-    </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="{Binding Day}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Large"/>
+            <Button Text="Click Me" Command="{Binding clickMe}"/>
         </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>

@@ -7,19 +7,33 @@ using Xamarin.Forms;
 
 using OptimalWeekApp.Models;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace OptimalWeekApp.ViewModels
 {
-    public class DayPageViewModel: BaseViewModel
+    public class DayPageViewModel : BaseViewModel
     {
-        public DayPageViewModel()
+        private string _day = string.Empty;
+        public string Day
         {
-            GoBackCommand = new Command(GoBack);
+            get => _day;
+            set => SetProperty(ref _day, value);
         }
-        private async void GoBack(object back)
+        public DayPageViewModel(string day)
         {
-            await Shell.Current.GoToAsync("///WeekPage");
+            Day = day;
+            clickMe = new Command(async =>
+            {
+                Day = "Anar test";
+                Console.WriteLine(Day);
+            });
         }
-        public ICommand GoBackCommand { get; }
+
+        public ICommand clickMe { get; private set; }
+
+
     }
+
 }

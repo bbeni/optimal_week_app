@@ -14,7 +14,7 @@ namespace OptimalWeekApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new WeekPage());
         }
 
         protected override void OnStart()
