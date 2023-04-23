@@ -56,5 +56,10 @@ namespace OptimalWeekApp.Services
         {
             return await Task.FromResult(items);
         }
+
+        public Task<IEnumerable<Item>> GetEventsWeekday(string weekday)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

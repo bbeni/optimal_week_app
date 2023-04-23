@@ -1,5 +1,7 @@
 ﻿using OptimalWeekApp.Views;
+using OptimalWeekApp.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -9,6 +11,7 @@ namespace OptimalWeekApp.ViewModels
 {
     public class WeekPageViewModel : BaseViewModel
     {
+
         public WeekPageViewModel(INavigationService navigationService)
         {
             Title = "Cool Week Planner";

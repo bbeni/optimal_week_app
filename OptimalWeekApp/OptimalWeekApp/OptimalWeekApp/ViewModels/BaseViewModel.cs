@@ -1,4 +1,4 @@
-﻿    using OptimalWeekApp.Models;
+﻿using OptimalWeekApp.Models;
 using OptimalWeekApp.Services;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ namespace OptimalWeekApp.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<WeeklyEvent> WEDataStore => DependencyService.Get<IDataStore<WeeklyEvent>>();
 
         bool isBusy = false;
         public bool IsBusy
