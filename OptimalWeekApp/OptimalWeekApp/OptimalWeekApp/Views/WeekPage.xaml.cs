@@ -24,4 +24,9 @@ namespace OptimalWeekApp.Views
             await Navigation.PushAsync(new DayPage(day));
         }
     }
+    public static class ImageResourceHelper
+    {
+        public static ImageSource MyImageSource => ImageSource.FromResource("OptimalWeekApp.Resources.weekplanningimage.jpg");
+    }
 }
+
