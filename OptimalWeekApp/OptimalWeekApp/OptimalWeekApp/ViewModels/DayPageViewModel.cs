@@ -38,10 +38,10 @@ namespace OptimalWeekApp.ViewModels
             AddItemCommand = new Command(OnAddItem);
 
 
-            Hours = new ObservableCollection<DayTime>();
+            Hours24 = new ObservableCollection<DayTime>();
             for (int i = 1; i <= 24; i++)
             {
-                Hours.Add(new DayTime(i, 0));
+                Hours24.Add(new DayTime(i, 0));
             }
 
         }
@@ -122,7 +122,7 @@ namespace OptimalWeekApp.ViewModels
 
         public ObservableCollection<ITimeSpanEvent> Events { get; }
         public ObservableCollection<ITimeSpanEvent> EventsAndFreetime { get; }
-        public ObservableCollection<DayTime> Hours { get; }
+        public ObservableCollection<DayTime> Hours24 { get; }
         public Command LoadEventsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<ITimeSpanEvent> EventTapped { get; }

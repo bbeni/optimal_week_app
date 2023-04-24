@@ -18,14 +18,14 @@
         <ScrollView>
             <StackLayout Orientation="Horizontal" Padding="0" Margin="0">
                 <CollectionView x:Name="HoursListView"
-                                ItemsSource="{Binding Hours}"
+                                ItemsSource="{Binding Hours24}"
                                 HeightRequest="1440"
                                 VerticalOptions="FillAndExpand" WidthRequest="30"
                                 Margin="0">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame BackgroundColor="GhostWhite" Margin="0" Padding="0" HeightRequest="60" VerticalOptions="FillAndExpand" BorderColor="Black">
-                                <Label Text="1" HorizontalTextAlignment="End" VerticalTextAlignment="End"></Label>
+                                <Label x:DataType="model:DayTime" Text="{Binding hours}" HorizontalTextAlignment="End" VerticalTextAlignment="End"></Label>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
