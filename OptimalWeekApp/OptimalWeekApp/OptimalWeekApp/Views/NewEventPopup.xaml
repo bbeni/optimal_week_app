@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="OptimalWeekApp.Views.NewEventPopup"
+             Size="300, 600">
+
+    <xct:Popup.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Label Text="Hello A. Good Luck with your challenge" FontSize="18" TextColor="Navy" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Button Text="You can do this!"></Button>
+        </StackLayout>
+    </xct:Popup.Content>
+
+</xct:Popup>
