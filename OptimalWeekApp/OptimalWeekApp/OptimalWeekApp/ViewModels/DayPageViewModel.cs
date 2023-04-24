@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using OptimalWeekApp.Views;
+using Xamarin.CommunityToolkit.Extensions;
 
 namespace OptimalWeekApp.ViewModels
 {
@@ -50,9 +51,8 @@ namespace OptimalWeekApp.ViewModels
             Debug.WriteLine(e.ToString());
             if (e.GetType() == typeof(FreeTime))
             {
-                var page = new ContentPage();
-
-                await OptimalWeekApp.App.Current.MainPage.Navigation.PushAsync(page);
+                var popup = new NewEventPopup();
+                await OptimalWeekApp.App.Current.MainPage.Navigation.ShowPopupAsync(popup);
             }
         }
 
@@ -70,7 +70,7 @@ namespace OptimalWeekApp.ViewModels
             {
                 Events.Clear();
                 EventsAndFreetime.Clear();
-                var allEvents = await WEDataStore.GetItemsAsync(true);
+                var allEvents = await WeeklyEventsDataStore.GetItemsAsync(true);
 
                 foreach (var e in allEvents)
                 {

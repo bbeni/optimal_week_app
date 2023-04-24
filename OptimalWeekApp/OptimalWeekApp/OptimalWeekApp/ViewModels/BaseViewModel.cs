@@ -10,8 +10,7 @@ namespace OptimalWeekApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-        public IDataStore<ITimeSpanEvent> WEDataStore => DependencyService.Get<IDataStore<ITimeSpanEvent>>();
+        public IDataStore<ITimeSpanEvent> WeeklyEventsDataStore => DependencyService.Get<IDataStore<ITimeSpanEvent>>();
 
         bool isBusy = false;
         public bool IsBusy
