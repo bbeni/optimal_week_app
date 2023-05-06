@@ -7,8 +7,17 @@
 
     <xct:Popup.Content>
         <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="Hello A. Good Luck with your challenge" FontSize="18" TextColor="Navy" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-            <Button Text="You can do this!"></Button>
+            <Label Text="{Binding Greeting}"
+                   FontSize="18" TextColor="Navy"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"></Label>
+            <Entry Placeholder="Title" PlaceholderColor="Black"/>
+            <Entry Placeholder="Description" PlaceholderColor="Gray"/>
+            <Label>Start Time:</Label>
+            <TimePicker Time = "{Binding SelectedTimeStart}" />
+            <Label>End Time:</Label>
+            <TimePicker Time = "{Binding SelectedTimeEnd}" />
+            <Button Text = "Save"></Button>
         </StackLayout>
     </xct:Popup.Content>
 

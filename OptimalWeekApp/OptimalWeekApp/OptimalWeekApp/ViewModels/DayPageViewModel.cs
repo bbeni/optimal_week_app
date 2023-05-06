@@ -56,9 +56,10 @@ namespace OptimalWeekApp.ViewModels
             }
         }
 
-        private void OnAddItem(object obj)
+        private async void OnAddItem(object obj)
         {
-            throw new NotImplementedException();
+            var popup = new NewEventPopup();
+            await OptimalWeekApp.App.Current.MainPage.Navigation.ShowPopupAsync(popup);
         }
 
 
