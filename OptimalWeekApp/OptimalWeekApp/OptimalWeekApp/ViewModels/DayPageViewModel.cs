@@ -56,10 +56,10 @@ namespace OptimalWeekApp.ViewModels
             }
         }
 
-        async private void OnAddItem(object obj)
+        private async void OnAddItem(object obj)
         {
-            await WeeklyEventsDataStore.AddItemAsync(new WeeklyEvent(Guid.NewGuid().ToString(), "test", "this is a test", "monday", new DayTime(100), new DayTime(60)));
-            await ExecuteLoadEventsCommand();
+            var popup = new NewEventPopup();
+            await OptimalWeekApp.App.Current.MainPage.Navigation.ShowPopupAsync(popup);
         }
 
 
@@ -78,8 +78,6 @@ namespace OptimalWeekApp.ViewModels
                     if (e.Day.ToString() == Day)
                         Events.Add(e);
                 }
-
-                Debug.WriteLine("reched this: " +  allEvents.Count());
 
 
                 // add first empty timespan
