@@ -59,7 +59,7 @@ namespace OptimalWeekApp.ViewModels
         async private void OnAddItem(object obj)
         {
             await WeeklyEventsDataStore.AddItemAsync(new WeeklyEvent(Guid.NewGuid().ToString(), "test", "this is a test", "monday", new DayTime(100), new DayTime(60)));
-            ExecuteLoadEventsCommand();
+            await ExecuteLoadEventsCommand();
         }
 
 
