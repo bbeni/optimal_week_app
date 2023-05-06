@@ -13,15 +13,29 @@ namespace OptimalWeekApp.Views
     }
     public partial class WeekPage : ContentPage, INavigationService
     {
+        private WeekPageViewModel _viewModel;
         public WeekPage()
         {
             InitializeComponent();
-            BindingContext = new WeekPageViewModel(this);
+            _viewModel = new WeekPageViewModel(this);
+            BindingContext = _viewModel;
         }
 
         public async Task NavigateToDayPage(string day)
         {
             await Navigation.PushAsync(new DayPage(day));
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            _viewModel.SaveState();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.LoadState();
         }
     }
     public static class ImageResourceHelper

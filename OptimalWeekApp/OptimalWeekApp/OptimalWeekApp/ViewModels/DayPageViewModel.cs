@@ -56,9 +56,10 @@ namespace OptimalWeekApp.ViewModels
             }
         }
 
-        private void OnAddItem(object obj)
+        async private void OnAddItem(object obj)
         {
-            throw new NotImplementedException();
+            await WeeklyEventsDataStore.AddItemAsync(new WeeklyEvent(Guid.NewGuid().ToString(), "test", "this is a test", "monday", new DayTime(100), new DayTime(60)));
+            ExecuteLoadEventsCommand();
         }
 
 
@@ -77,6 +78,8 @@ namespace OptimalWeekApp.ViewModels
                     if (e.Day.ToString() == Day)
                         Events.Add(e);
                 }
+
+                Debug.WriteLine("reched this: " +  allEvents.Count());
 
 
                 // add first empty timespan

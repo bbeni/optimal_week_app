@@ -12,7 +12,8 @@ namespace OptimalWeekApp
         public App()
         {
             InitializeComponent();
-            DependencyService.Register<MockEventStore>();
+            //DependencyService.Register<MockEventStore>();
+            DependencyService.Register<EventStore>();
             MainPage = new NavigationPage(new WeekPage());
         }
 

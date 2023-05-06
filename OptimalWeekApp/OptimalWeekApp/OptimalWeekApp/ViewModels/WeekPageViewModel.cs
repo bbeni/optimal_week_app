@@ -26,5 +26,15 @@ namespace OptimalWeekApp.ViewModels
          
         public ICommand NavigateToDayCommand { get; private set; }
         private readonly INavigationService _navigationService;
+
+        internal void LoadState()
+        {
+            
+        }
+
+        internal void SaveState()
+        {
+
+        }
     }
 }

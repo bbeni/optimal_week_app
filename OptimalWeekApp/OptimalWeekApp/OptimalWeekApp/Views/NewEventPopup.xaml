@@ -7,7 +7,11 @@
 
     <xct:Popup.Content>
         <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="Hello A. Good Luck with your challenge" FontSize="18" TextColor="Navy" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Label Text="Hello A. Good Luck with your challenge" 
+                   FontSize="18" 
+                   TextColor="Navy" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalOptions="CenterAndExpand"></Label>
             <Button Text="You can do this!"></Button>
         </StackLayout>
     </xct:Popup.Content>
