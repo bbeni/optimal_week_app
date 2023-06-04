@@ -1,0 +1,5 @@
+- [ ] change app logo
+- [ ] implement save functionality to add event
+- [ ] implement starting time depending where you clicked
+- [ ] impl edit events
+- [ ] try notifications
